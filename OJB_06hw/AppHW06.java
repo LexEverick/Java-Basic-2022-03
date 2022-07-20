@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class AppHW06
 {
     public static void main(String[] args)
@@ -7,7 +9,7 @@ public class AppHW06
         Scanner input = new Scanner(System.in);
 
         String[][] questionsAndAnswers = {
-                {"Сколько будет 2+2?", "Какую форму имеет земля?", "Какого цвета синий кит"},
+                {"Сколько будет 2+2?", "Какую форму имеет земля?", "Какого цвета синий кит?"},
                 {"2", "22", "4"},
                 {"Плоская", "Круглая", "Квадратная", "Шарообразная"},
                 {"Белый", "Синий", "Голубой"}
@@ -36,20 +38,15 @@ public class AppHW06
                     }
                 }
             } else {
-                //&& (input.nextInt() > 0)) {
-                //& (input.nextInt() < questionsAndAnswers[i+1].length)) {
                 System.out.println("Вы ввели что-то не то =(");
                 input.next();
             }
-
-
-
             System.out.println();
         }
         if (count > 0) {
             System.out.println("Поздравляем!\nУ вас " + count + " правильных ответов и " + (3 - count) + " неправильных.");
         } else {
-            System.out.println("Все пропало! У вас 0 правильных ответов");
+            System.out.println("Все пропало! У вас 0 правильных ответов.");
         }
     }
 }

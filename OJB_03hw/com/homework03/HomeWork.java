@@ -1,3 +1,5 @@
+package com.homework03;
+
 import java.util.Base64;
 import java.util.Scanner;
 

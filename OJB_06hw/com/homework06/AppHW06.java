@@ -1,3 +1,5 @@
+package com.homework06;
+
 import java.util.Scanner;
 
 public class AppHW06
@@ -25,7 +27,7 @@ public class AppHW06
             }
             System.out.print("Введите ваш ответ (число от 1 до " + questionsAndAnswers[i].length + "): ");
 
-            int answer = 0;
+            int answer;
             if (input.hasNextInt()) {
                 answer = input.nextInt();
                 if (answer < 1 || answer > questionsAndAnswers[i+1].length) {

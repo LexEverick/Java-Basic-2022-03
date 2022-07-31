@@ -1,13 +1,29 @@
 package com.homework12;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Client {
 
     private String name;
-    private int yearOfBirth = 18 + (int) (Math.random() * 62);
+    private int clientAge;
 
-    public Client(String name) {
+    public Client(String name, int clientAge) {
         this.name = name;
-        //this.earOfBirth = earOfBirth;
+        this.clientAge = clientAge;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return clientAge == client.clientAge && name.equals(client.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, clientAge);
     }
 
     public String getName() {
@@ -18,14 +34,12 @@ public class Client {
         this.name = name;
     }
 
-    public int getYearOfBirth() {
-        return yearOfBirth;
+    public int getClientAge() {
+        return clientAge;
     }
 
-    public void setYearOfBirth(int yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
+    public void setClientAge(int clientAge) {
+        this.clientAge = clientAge;
     }
-
-
 
 }

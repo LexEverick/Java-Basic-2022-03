@@ -2,8 +2,19 @@ package com.homework12;
 
 public class Account {
 
-    private static int gold = 0;
+    Client client;
+    int goldOnAccount;
 
+    public Account(Client client, int goldOnAccount) {
+        this.client = client;
+        this.goldOnAccount = goldOnAccount;
+    }
 
+    public int getGoldOnAccount() {
+        return goldOnAccount;
+    }
 
+    public Client getClient() {
+        return client;
+    }
 }
